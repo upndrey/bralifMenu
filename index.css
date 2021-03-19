@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ccc;
 }
 
 header {
@@ -20,7 +19,7 @@ header {
    align-items: center;
    justify-content: space-between;
    color: #fff;
- }
+}
 
 a {
   color: inherit;

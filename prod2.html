@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      width: 100%;
+      background: #000;
+    }
+
+    .menu {
+       max-width: 980px;
+       width: 100%;
+       margin: auto;
+       padding: 0;
+       height: 100px;
+       display: -webkit-flex;
+       display: -ms-flex;
+       display: flex;
+       -ms-align-items: center;
+       align-items: center;
+       justify-content: space-around;
+       flex-wrap: wrap;
+       color: #fff;
+    }
+
+    .menu>li {
+          transition: inherit;
+          font-family: futura-lt-w01-book,sans-serif;
+          margin: 0 25px;
+          font-size: 14px;
+          letter-spacing: 0.1em;
+          font-family: "open sans",sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          display: initial;
+          color: #FFFFFF;
+    }
+
+    .menu>li:hover {
+      color: #ccc;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .submenu__wrapper {
+      width: 100%;
+      background: rgba(155, 155, 155, .5);
+    }
+
+    .submenu.displaynone {
+      display: none;
+    }
+    .submenu {
+      width: 100%;
+      position: absolute;
+      background: #fff;
+      display: flex;
+      height: 490px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .submenu__left {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+      padding-right: 100px;
+      margin: 15px 0;
+    }
+
+    .submenu__left>li {
+      margin-bottom: 15px;
+    }
+
+    .submenu__left>li:hover {
+      color: #7f7f7f;
+    }
+
+    .submenu__right {
+      flex-grow: 1;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -ms-align-items: flex-start;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .submenu__right.displaynone {
+      display: none;
+    }
+
+    .submenu__right>img {
+      width: 380px;
+      -ms-align-self: center;
+      align-self: center;
+      margin-right: 50px;
+    }
+
+    .submenu__block {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 0;
+      margin: 15px 0;
+    }
+
+    .submenu__block>ul {
+      margin: 0;
+    }
+
+    .submenu__block>ul>li {
+      margin-bottom: 15px;
+    }
+
+    .submenu__block>ul>li:hover {
+      color: #7f7f7f;
+    }
+
+    .submenu__block>ul>.title {
+      color: #ccc;
+    }
+
+    .submenu__block>ul>.title:hover {
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <ul class="menu">
+      <li class="notSubLink"><a href="https://www.bralif.com/">Главная</a></li>
+      <li class="subLink subLink1"><a href="#">Бюсты</a></li>
+      <li class="subLink subLink2"><a href="https://www.bralif.com/одежда">Одежда</a></li>
+      <li class="subLink subLink3"><a href="#">Трусы</a></li>
+      <li class="subLink subLink4"><a href="#">Бренды</a></li>
+      <li class="notSubLink"><a href="https://www.bralif.com/мужское-белье">Мужское белье</a></li>
+    </ul>
+    <div class="submenu__wrapper">
+      <div class="submenu subLink1 displaynone">
+        <ul class="submenu__left">
+          <li class="rings active"><a href="#">Кольца</a></li>
+          <li class="earrings"><a href="#">Серьги</a></li>
+          <li class="chains"><a href="#">Цепи</a></li>
+          <li><a href="#">Подвески</a></li>
+          <li><a href="#">Браслеты</a></li>
+          <li><a href="#">Колье</a></li>
+          <li><a href="#">Броши</a></li>
+          <li><a href="#">Посуда</a></li>
+          <li><a href="#">Другое</a></li>
+        </ul>
+        <div class="submenu__right rings">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения колец</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right earrings displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения серьг</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right chains displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения цепей</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+      </div>
+      <div class="submenu subLink2 displaynone">
+        <ul class="submenu__left">
+          <li class="subLink2__main active"><a href="#">Основное</a></li>
+          <li class="subLink2__beach"><a href="#">Пляжная одежда</a></li>
+          <li class="subLink2__home"><a href="#">Домашняя одежда</a></li>
+        </ul>
+        <div class="submenu__right subLink2__main">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип одежды</li>
+              <li><a href="#">Body</a></li>
+              <li><a href="#">Блузки</a></li>
+              <li><a href="#">Футболки</a></li>
+              <li><a href="#">Юбки</a></li>
+              <li><a href="#">Брюки</a></li>
+              <li><a href="#">Водолазки</a></li>
+              <li><a href="#">Пиджаки</a></li>
+              <li><a href="#">Платья</a></li>
+              <li><a href="#">Шорты</a></li>
+              <li><a href="#">Накидки</a></li>
+              <li><a href="#">Майки</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right subLink2__beach displaynone">
+          <div class="submenu__block">
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right subLink2__home displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип одежды</li>
+              <li><a href="#">Сорочки</a></li>
+              <li><a href="#">Халаты</a></li>
+              <li><a href="#">Платья</a></li>
+              <li><a href="#">Костюмы для сна</a></li>
+              <li><a href="#">Пижамы</a></li>
+              <li><a href="#">Пижама шортики</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+      </div>
+      <div class="submenu subLink3 displaynone">
+        <ul class="submenu__left">
+          <li class="rings active"><a href="#">Кольца 2</a></li>
+          <li class="earrings"><a href="#">Серьги</a></li>
+          <li class="chains"><a href="#">Цепи</a></li>
+          <li><a href="#">Подвески</a></li>
+          <li><a href="#">Браслеты</a></li>
+          <li><a href="#">Колье</a></li>
+          <li><a href="#">Броши</a></li>
+          <li><a href="#">Посуда</a></li>
+          <li><a href="#">Другое</a></li>
+        </ul>
+        <div class="submenu__right rings">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения колец</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right earrings displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения серьг</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right chains displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения цепей</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+      </div>
+      <div class="submenu subLink4 displaynone">
+        <ul class="submenu__left">
+          <li class="rings active"><a href="#">Кольца 3</a></li>
+          <li class="earrings"><a href="#">Серьги</a></li>
+          <li class="chains"><a href="#">Цепи</a></li>
+          <li><a href="#">Подвески</a></li>
+          <li><a href="#">Браслеты</a></li>
+          <li><a href="#">Колье</a></li>
+          <li><a href="#">Броши</a></li>
+          <li><a href="#">Посуда</a></li>
+          <li><a href="#">Другое</a></li>
+        </ul>
+        <div class="submenu__right rings">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения колец</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right earrings displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения серьг</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+        <div class="submenu__right chains displaynone">
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Тип украшения цепей</li>
+              <li><a href="#">Обручальные</a></li>
+              <li><a href="#">Помолвочные</a></li>
+              <li><a href="#">Печатки и перстни</a></li>
+              <li><a href="#">Наборные</a></li>
+              <li><a href="#">На два пальца</a></li>
+              <li><a href="#">На две фаланги</a></li>
+            </ul>
+            <ul>
+              <li class="title">Для кого</li>
+              <li><a href="#">Мужские</a></li>
+              <li><a href="#">Женские</a></li>
+              <li><a href="#">Детские</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Материал</li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Белое золото</a></li>
+              <li><a href="#">Желтое золото</a></li>
+              <li><a href="#">Красное золото</a></li>
+              <li><a href="#">Серебро</a></li>
+              <li><a href="#">Золото 585 пробы</a></li>
+              <li><a href="#">Серебро 925 пробы</a></li>
+            </ul>
+          </div>
+          <div class="submenu__block">
+            <ul>
+              <li class="title">Вставки</li>
+              <li><a href="#">С камнями</a></li>
+              <li><a href="#">Бриллиант</a></li>
+              <li><a href="#">Изумруд</a></li>
+              <li><a href="#">Сапфир</a></li>
+              <li><a href="#">Рубин</a></li>
+              <li><a href="#">Фианит</a></li>
+              <li><a href="#">Топаз</a></li>
+              <li><a href="#">Жемчуг</a></li>
+              <li><a href="#">Гранат</a></li>
+              <li><a href="#">Аметист</a></li>
+              <li><a href="#">Опал</a></li>
+            </ul>
+          </div>
+          <img src="./images/img1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </header>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    let menuDom = document.querySelectorAll('.menu>.subLink');
+    let notSubLinkDom = document.querySelectorAll('.menu>.notSubLink');
+    let headerDom = document.querySelector('header');
+    let submenuDom = document.querySelectorAll('.submenu');
+
+    notSubLinkDom.forEach((item, i) => {
+      item.addEventListener("mouseenter", function () {
+        submenuDom.forEach((item2, i) => {
+          item2.classList.add("displaynone");
+        });
+      });
+    });
+
+
+    menuDom.forEach((item, i) => {
+      item.addEventListener("mouseenter", function () {
+        submenuDom.forEach((item2, i) => {
+          item2.classList.add("displaynone");
+        });
+        let currentSubmenuDom = document.querySelector('.submenu.'+item.classList[1]);
+        currentSubmenuDom.classList.remove("displaynone");
+      });
+    });
+    headerDom.addEventListener("mouseleave", function () {
+      submenuDom.forEach((item, i) => {
+        item.classList.add("displaynone");
+      });
+    });
+
+    let leftHoverLiDom = document.querySelectorAll('.submenu__left>li');
+    leftHoverLiDom.forEach((item, i) => {
+      item.addEventListener("mouseenter", function (e) {
+        let activeDom = document.querySelector('.submenu__left>li.active');
+        let foundActiveElems = document.querySelectorAll("." + activeDom.classList[0]);
+        foundActiveElems[0].classList.remove("active");
+        foundActiveElems[1].classList.add("displaynone");
+
+        let currentClass = e.target.classList[0];
+        let foundElems = document.querySelectorAll("." + currentClass);
+        foundElems[0].classList.add("active");
+        foundElems[1].classList.remove("displaynone");
+      })
+    });
+
+
+  });
+
+</script>
+</html>
